@@ -116,6 +116,21 @@
 3. **Weitere Hinweise**
    - Details siehe [`codex/README.md`](codex/README.md)
 
+### Gemini CLI (GenKit Extension)
+
+1. **Gemeinsame Assets synchronisieren**
+   ```bash
+   cd /pfad/zu/d-kit
+   ./tools/sync_skill_assets.sh
+   ```
+2. **Extension lokal installieren**
+   ```bash
+   gemini extensions install --local /pfad/zu/d-kit/gemini
+   ```
+3. **Verwendung**
+   - Beim Start liest Gemini die Kontextdatei `DKIT.md` und stellt Templates/Checklisten bereit.
+   - Details siehe [`gemini/README.md`](gemini/README.md)
+
 ## 🎬 Quick Start
 
 ### Beispiel 1: Neue Software entwickeln

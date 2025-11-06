@@ -10,6 +10,7 @@ REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 SHARED_DIR="$REPO_ROOT/shared/skill-common"
 CLAUDE_DIR="$REPO_ROOT/claude/skill"
 CODEX_DIR="$REPO_ROOT/codex/skills/d-kit"
+GEMINI_DIR="$REPO_ROOT/gemini/context"
 
 if [ ! -d "$SHARED_DIR" ]; then
   echo "❌ Gemeinsamer Skill-Ordner nicht gefunden: $SHARED_DIR" >&2
@@ -33,5 +34,6 @@ function sync_dir() {
 
 sync_dir "$SHARED_DIR" "$CLAUDE_DIR" "Claude Skill"
 sync_dir "$SHARED_DIR" "$CODEX_DIR" "Codex Skill"
+sync_dir "$SHARED_DIR" "$GEMINI_DIR" "Gemini Extension"
 
 echo "✅ Skill-Ressourcen synchronisiert."
