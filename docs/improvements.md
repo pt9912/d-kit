@@ -72,7 +72,7 @@
 
 ### ✅ Umfassende Prompt-Templates
 
-**Neu hinzugefügt** (10 Templates):
+**Neu hinzugefügt** (12 Templates):
 1. `pflichtenheft.md` - Detaillierte Struktur für Anforderungen
 2. `architektur.md` - Vollständiges Architektur-Framework
 3. `mvp-plan.md` - Strukturierte MVP-Planung
@@ -80,9 +80,11 @@
 5. `task-design.md` - Umfassendes Task-Design (>300 Zeilen!)
 6. `design-review.md` - Systematisches Review-Framework
 7. `code-generation.md` - Clean-Code Best Practices
-8. `test-strategie.md` - Vollständige Test-Planung
-9. `progress-update.md` - Fortschritts- und Statusberichte
-10. `ui-design-figma.md` - Durchgängiger UI-Design-Flow für Figma
+8. `test-generation.md` - Abdeckung & Regressionstests planen
+9. `test-strategie.md` - Vollständige Test-Planung
+10. `progress-update.md` - Fortschritts- und Statusberichte
+11. `ui-design-figma.md` - Durchgängiger UI-Design-Flow für Figma
+12. `bug-fix.md` - Strukturierter Bug-Fix-Workflow
 
 → **Vorteil**: Konsistente, hochwertige Outputs
 

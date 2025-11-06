@@ -25,7 +25,7 @@
 - ✅ **Zeitersparnis** - 50-60% schnellere Entwicklung bei höherer Qualität
 - ✅ **Best Practices** - Clean Code, SOLID-Prinzipien, umfassendes Error-Handling
 - ✅ **Kontinuierliche Verbesserung** - Learnings dokumentieren und Prozess optimieren
-- ✅ **Prompt-Templates** - 10 ausgereifte Templates für konsistente Outputs
+- ✅ **Prompt-Templates** - 12 ausgereifte Templates für konsistente Outputs
 
 ## ✨ Features
 
@@ -56,9 +56,11 @@
 - `task-design.md` - Detailliertes Task-Design (>300 Zeilen)
 - `design-review.md` - Systematisches Review-Framework
 - `code-generation.md` - Clean-Code Best Practices
+- `test-generation.md` - Testfälle und Coverage-Strategie
 - `test-strategie.md` - Umfassende Test-Planung
 - `progress-update.md` - Status- und Fortschrittsberichte
 - `ui-design-figma.md` - Figma-basierter UI-Design-Flow
+- `bug-fix.md` - Systematischer Bug-Fix-Workflow
 
 **Dokument-Templates** (`claude/skill/references/templates/`):
 - `lastenheft.md` - Strukturiertes Lastenheft mit Beispielen

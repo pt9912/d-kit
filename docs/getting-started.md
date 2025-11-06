@@ -78,9 +78,11 @@ Claude wird:
 - **task-design.md** - Detailliertes Task-Design
 - **design-review.md** - Systematisches Design-Review
 - **code-generation.md** - Clean-Code-Generierung
+- **test-generation.md** - Testfälle & Coverage-Strategie
 - **test-strategie.md** - Umfassende Test-Planung
 - **progress-update.md** - Fortschritts- und Statusberichte
 - **ui-design-figma.md** - UI-Design-Flow für Figma
+- **bug-fix.md** - Strukturierter Bug-Fix-Prozess
 
 ### Dokument-Templates (`claude/skill/references/templates/`)
 - **lastenheft.md** - Strukturiertes Lastenheft
