@@ -133,6 +133,15 @@
    - Beim Start liest Gemini die Kontextdatei `DKIT.md` und stellt Templates/Checklisten bereit.
    - Details siehe [`gemini/README.md`](gemini/README.md)
 
+### Grok (xAI Collections)
+
+1. **Collection anlegen & Dateien hochladen**
+   - Anleitung siehe [`docs/grok-collections.md`](docs/grok-collections.md)
+   - Empfohlen: Alle Dateien aus `shared/skill-common/` hochladen.
+2. **Grok anweisen**
+   - Verwende den bereitgestellten Startprompt, damit Grok jede Aufgabe mit `collections.search` beginnt.
+   - Checklisten wie gewohnt per `update_plan` abbilden.
+
 ## 🎬 Quick Start
 
 ### Beispiel 1: Neue Software entwickeln
