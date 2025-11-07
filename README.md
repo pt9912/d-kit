@@ -85,6 +85,16 @@
 
 ## 🚀 Installation
 
+### Gemeinsame Ressourcen synchronisieren
+
+Die Claude-, Codex- und Gemini-Skills lesen ihre Templates zur Build-Zeit aus `shared/skill-common/`. Führe deshalb **vor jedem Packaging oder jeder Installation** einmal
+
+```bash
+./tools/sync_skill_assets.sh
+```
+
+aus. Dadurch werden die Zielordner (`claude/skill/…`, `codex/skills/d-kit/…`, `gemini/context/…`) mit den aktuellen Templates/Checklisten gefüllt.
+
 ### Voraussetzungen
 
 - Claude Account (Sonnet 4.5 oder höher empfohlen)
@@ -110,6 +120,7 @@
 1. **Skill-Dateien installieren**
    ```bash
    cd /pfad/zu/d-kit
+   ./tools/sync_skill_assets.sh
    ./codex/tools/install_skill.sh
    ```
 2. **Bootstrap aktivieren**

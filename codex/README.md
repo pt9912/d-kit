@@ -27,6 +27,7 @@ codex/
 
    ```bash
    cd /pfad/zu/d-kit
+   ./tools/sync_skill_assets.sh
    ./codex/tools/install_skill.sh
    ```
 

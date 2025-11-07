@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Synchronisiert gemeinsame Skill-Ressourcen in die Claude- und Codex-Struktur.
+# Synchronisiert gemeinsame Skill-Ressourcen im Build (Claude, Codex, Gemini).
 
 set -euo pipefail
 
@@ -17,17 +17,13 @@ if [ ! -d "$SHARED_DIR" ]; then
   exit 1
 fi
 
-function sync_dir() {
+sync_dir() {
   local source="$1"
   local target="$2"
   local label="$3"
 
-  if [ ! -d "$target" ]; then
-    echo "❌ Zielordner für $label fehlt: $target" >&2
-    exit 1
-  fi
-
-  echo "➡️  Synchronisiere $label"
+  echo "➡️  Befülle $label aus gemeinsamen Quellen"
+  rm -rf "$target/references" "$target/scripts"
   rsync -a "$source/references/" "$target/references/"
   rsync -a "$source/scripts/" "$target/scripts/"
 }
@@ -36,4 +32,4 @@ sync_dir "$SHARED_DIR" "$CLAUDE_DIR" "Claude Skill"
 sync_dir "$SHARED_DIR" "$CODEX_DIR" "Codex Skill"
 sync_dir "$SHARED_DIR" "$GEMINI_DIR" "Gemini Extension"
 
-echo "✅ Skill-Ressourcen synchronisiert."
+echo "✅ Skill-Ressourcen aktualisiert."

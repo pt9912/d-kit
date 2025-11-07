@@ -13,6 +13,9 @@ Das d-kit Repository enthält ein fertiges Script:
 ```bash
 cd d-kit
 
+# Gemeinsame Templates/Prompts/Scripts in den Build kopieren
+./tools/sync_skill_assets.sh
+
 # Skill validieren und packen
 ./claude/tools/package_skill.sh
 ```

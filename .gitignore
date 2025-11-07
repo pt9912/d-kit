@@ -60,3 +60,11 @@ coverage/
 *.bak
 *.backup
 *~
+
+# Generated skill artifacts
+claude/skill/references/
+claude/skill/scripts/
+codex/skills/d-kit/references/
+codex/skills/d-kit/scripts/
+gemini/context/references/
+gemini/context/scripts/
