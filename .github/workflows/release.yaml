@@ -1,0 +1,42 @@
+name: Build d-kit Skills
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Sync shared assets
+        run: ./tools/sync_skill_assets.sh
+      - name: Package Claude skill
+        run: ./claude/tools/package_skill.sh
+      - name: Upload Claude .skill artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-skill
+          path: claude/releases/*
+      - name: Archive Codex skill
+        run: |
+          tar -czf codex-skill.tar.gz -C codex skills README.md bootstrap tools
+      - name: Upload Codex artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-skill
+          path: codex-skill.tar.gz
+      - name: Archive Gemini extension
+        run: |
+          tar -czf gemini-extension.tar.gz -C gemini .
+      - name: Upload Gemini artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-extension
+          path: gemini-extension.tar.gz
