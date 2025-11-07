@@ -19,6 +19,11 @@ jobs:
     if: github.ref == 'refs/heads/main' || startswith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
+      - name: Determine version
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' gemini/gemini-extension.json)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -30,21 +35,23 @@ jobs:
       - name: Upload Claude .skill artifact
         uses: actions/upload-artifact@v4
         with:
-          name: claude-skill
-          path: claude/releases/*
+          name: claude-skill-${{ steps.version.outputs.version }}
+          path: claude/releases/d-kit-v${{ steps.version.outputs.version }}.skill
       - name: Archive Codex skill
         run: |
-          tar -czf codex-skill.tar.gz -C codex skills README.md bootstrap tools
+          VERSION=${{ steps.version.outputs.version }}
+          tar -czf codex-skill-${VERSION}.tar.gz -C codex skills README.md bootstrap tools
       - name: Upload Codex artifact
         uses: actions/upload-artifact@v4
         with:
-          name: codex-skill
-          path: codex-skill.tar.gz
+          name: codex-skill-${{ steps.version.outputs.version }}
+          path: codex-skill-${{ steps.version.outputs.version }}.tar.gz
       - name: Archive Gemini extension
         run: |
-          tar -czf gemini-extension.tar.gz -C gemini .
+          VERSION=${{ steps.version.outputs.version }}
+          tar -czf gemini-extension-${VERSION}.tar.gz -C gemini .
       - name: Upload Gemini artifact
         uses: actions/upload-artifact@v4
         with:
-          name: gemini-extension
-          path: gemini-extension.tar.gz
+          name: gemini-extension-${{ steps.version.outputs.version }}
+          path: gemini-extension-${{ steps.version.outputs.version }}.tar.gz
