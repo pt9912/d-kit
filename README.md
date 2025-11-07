@@ -4,7 +4,7 @@
 
 **Strukturierte KI-gestützte Softwareentwicklung vom Lastenheft bis zum MVP**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yourusername/d-kit/releases)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/yourusername/d-kit/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude](https://img.shields.io/badge/Claude-Sonnet%204.5+-orange.svg)](https://claude.ai)
 
@@ -105,14 +105,14 @@ aus. Dadurch werden die Zielordner (`claude/skill/…`, `codex/skills/d-kit/…`
 1. **Download des Skills**
    ```bash
    # Download der neuesten Version
-   wget https://github.com/yourusername/d-kit/releases/download/v1.0.0/d-kit-v1.0.0.skill
+   wget https://github.com/yourusername/d-kit/releases/download/v1.1.0/d-kit-v1.1.0.skill
    ```
 
 2. **Import in Claude**
    - Öffnen Sie Claude
    - Gehen Sie zu Settings → Skills
    - Klicken Sie auf "Import Skill"
-   - Wählen Sie `d-kit-v1.0.0.skill` aus
+   - Wählen Sie `d-kit-v1.1.0.skill` aus
    - Der Skill ist nun verfügbar!
 
 ### Codex (GPT-5 Codex CLI)

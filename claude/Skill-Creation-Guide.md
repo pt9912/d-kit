@@ -216,7 +216,7 @@ MAJOR.MINOR.PATCH
 
 1. **CHANGELOG.md:**
 ```markdown
-## [1.1.0] - 2024-11-06
+## [1.1.0] - 2025-11-06
 ### Added
 - New feature
 ```
@@ -243,7 +243,7 @@ git commit -m "feat: add progress tracking"
 ### Schritt 2: Version aktualisieren
 ```bash
 # CHANGELOG.md editieren
-# [Unreleased] → [1.1.0] - 2024-11-06
+# [Unreleased] → [1.1.0] - 2025-11-06
 ```
 
 ### Schritt 3: Validieren
@@ -406,7 +406,7 @@ cd d-kit
 
 **Ihre aktuelle Situation:**
 
-✅ `d-kit-v1.0.0.skill` - Initial Release (bereits erstellt)
-✅ `d-kit-v1.1.0.skill` - Mit Progress-Tracking (gerade erstellt)
+✅ `d-kit-v1.1.0.skill` - Aktuelles Release (Shared Assets + Multi-Provider Support)
+✅ `d-kit-v1.0.0.skill` - Initial Release (Legacy, nur bei Bedarf verwenden)
 
 Beide verfügbar in: `claude/releases/` oder `/mnt/user-data/outputs/`
