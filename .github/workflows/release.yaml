@@ -1,0 +1,57 @@
+name: Build d-kit Skills
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build (default: main)'
+        default: 'main'
+        required: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || startswith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v4
+      - name: Determine version
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' gemini/gemini-extension.json)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Sync shared assets
+        run: ./tools/sync_skill_assets.sh
+      - name: Package Claude skill
+        run: ./claude/tools/package_skill.sh
+      - name: Upload Claude .skill artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-skill-${{ steps.version.outputs.version }}
+          path: claude/releases/d-kit-v${{ steps.version.outputs.version }}.skill
+      - name: Archive Codex skill
+        run: |
+          VERSION=${{ steps.version.outputs.version }}
+          tar -czf codex-skill-${VERSION}.tar.gz -C codex skills README.md bootstrap tools
+      - name: Upload Codex artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: codex-skill-${{ steps.version.outputs.version }}
+          path: codex-skill-${{ steps.version.outputs.version }}.tar.gz
+      - name: Archive Gemini extension
+        run: |
+          VERSION=${{ steps.version.outputs.version }}
+          tar -czf gemini-extension-${VERSION}.tar.gz -C gemini .
+      - name: Upload Gemini artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-extension-${{ steps.version.outputs.version }}
+          path: gemini-extension-${{ steps.version.outputs.version }}.tar.gz
