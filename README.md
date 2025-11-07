@@ -16,7 +16,7 @@
 
 ## 📋 Übersicht
 
-**d-kit** (Development KI Templates) ist ein KI-gestütztes Development-Framework mit strukturiertem 7-Phasen-Prozess. Prompt-Templates, automatische Tests und Quality Gates führen von der Anforderung bis zum Release – systematisch und effizient. Von der Anforderungsanalyse über Design und Implementation bis hin zu Testing und Release – jeder Schritt ist strukturiert, dokumentiert und mit Best Practices versehen.
+**d-kit** (Development KI Templates) ist ein KI-gestütztes Development-Framework nach dem Prinzip der **Spezifikationsgetriebenen Entwicklung (Spec-driven Development, SDD)** mit strukturiertem 7-Phasen-Prozess. Prompt-Templates, automatische Tests und Quality Gates führen von der Anforderung bis zum Release – systematisch und effizient. Von der Anforderungsanalyse über Design und Implementation bis hin zu Testing und Release – jeder Schritt ist spezifiziert, dokumentiert und mit Best Practices versehen.
 
 ### Warum d-kit?
 
