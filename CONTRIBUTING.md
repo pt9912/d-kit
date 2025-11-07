@@ -102,7 +102,7 @@ Neue Checklists oder Erweiterungen bestehender:
 # Dann:
 git clone https://github.com/your-username/d-kit.git
 cd d-kit
-git remote add upstream https://github.com/original-owner/d-kit.git
+git remote add upstream https://github.com/pt9912/d-kit.git
 ```
 
 ### 2. Branch erstellen
@@ -198,14 +198,15 @@ python3 -m compileall claude/skill/scripts
 
 ```
 d-kit/
+├── shared/skill-common/       # Einzige Quelle für Templates/Prompts/Skripte
 ├── claude/
-│   ├── skill/                 # Skill-Dateien (Haupt-Beitragsbereich)
-│   │   ├── SKILL.md           # Skill-Definition
-│   │   ├── scripts/           # Automatisierungs-Scripts
-│   │   ├── references/        # Prompt-Templates, Templates, Checklists, Learnings
-│   │   └── assets/            # Assets
+│   ├── skill/                 # wird via sync_script befüllt (SKILL.md + assets)
 │   └── tools/                 # Build- & Validierungs-Scripts
-├── docs/                      # Dokumentation
+├── codex/                     # Codex Skill (Installer, Bootstrap)
+├── gemini/                    # Gemini CLI Extension
+├── grok/                      # Collections-Skripte/Prompts
+├── docs/                      # Dokumentation (Getting Started, Grok, Examples …)
+├── tools/                     # sync_skill_assets.sh etc.
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── LICENSE
