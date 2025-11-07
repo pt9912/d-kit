@@ -2,13 +2,21 @@ name: Build d-kit Skills
 
 on:
   push:
+    branches:
+      - main
     tags:
       - 'v*'
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to build (default: main)'
+        default: 'main'
+        required: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || startswith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
