@@ -198,6 +198,7 @@ Vollständige Dokumentation finden Sie in [`docs/`](docs/):
 - [Examples](docs/examples/) - Praxisbeispiele
 - [Grok Collections](docs/grok-collections.md) - d-kit in xAI Grok integrieren
 - [GitHub Blog: Spec-driven Development Toolkit](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/) – beschreibt die gleiche Philosophie, auf der d-kit basiert
+- [GitHub/spec-kit](https://github.com/github/spec-kit) – Open-Source Toolkit für spefikationsgetriebene Entwicklung
 
 ## 📊 Erwartete Ergebnisse
 
