@@ -196,6 +196,8 @@ Vollständige Dokumentation finden Sie in [`docs/`](docs/):
 - [Process Overview](docs/process-overview.md) - Detaillierte Prozessbeschreibung
 - [Improvements](docs/improvements.md) - Verbesserungen gegenüber Ad-Hoc Entwicklung
 - [Examples](docs/examples/) - Praxisbeispiele
+- [Grok Collections](docs/grok-collections.md) - d-kit in xAI Grok integrieren
+- [GitHub Blog: Spec-driven Development Toolkit](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/) – beschreibt die gleiche Philosophie, auf der d-kit basiert
 
 ## 📊 Erwartete Ergebnisse
 
