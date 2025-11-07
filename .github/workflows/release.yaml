@@ -55,3 +55,11 @@ jobs:
         with:
           name: gemini-extension-${{ steps.version.outputs.version }}
           path: gemini-extension-${{ steps.version.outputs.version }}.tar.gz
+      - name: Attach assets to release
+        if: startswith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            claude/releases/d-kit-v${{ steps.version.outputs.version }}.skill
+            codex-skill-${{ steps.version.outputs.version }}.tar.gz
+            gemini-extension-${{ steps.version.outputs.version }}.tar.gz
